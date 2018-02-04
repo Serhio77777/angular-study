@@ -1,10 +1,18 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'ekreative-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  constructor (
+    private router: Router
+  ) {}
+
+  public goToDirectives() {
+    this.router.navigate(['/directives'])
+  }
+
 }

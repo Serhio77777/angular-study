@@ -1,0 +1,13 @@
+<div class="">
+  <h1>Directives Component</h1>
+  <div class="list">
+    <div class="" *ngFor="let element of list; let ind = index">
+      <p *ngIf="element !== 5 && element !== 2">Index: {{ind}} Value: {{element}}</p>
+    </div>
+    <ng-container *ngIf="listForIf.length > 0">
+      <div class="" *ngFor="let element of listForIf; let ind = index">
+        <p *ngIf="element !== 5 && element !== 2">{{element}}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>
