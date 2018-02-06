@@ -2,16 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // Components
-// import { AppComponent } from './app.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { WayBindingComponent } from './components/way-binding/way-binding.component';
 
 export const routes: Routes = [
-  // {
-  //   path: 'home',
-  //   component: AppComponent
-  // },
   {
     path: 'lifecycle',
     component: LifecycleComponent

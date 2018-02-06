@@ -1,4 +1,4 @@
-<div class="">
+<div [ngClass]="{'red': color === 'red', 'blue': color === 'blue'}">
   <h1>Directives Component</h1>
   <div [ngSwitch]="data.selected">
     <div class="">
@@ -20,5 +20,10 @@
         <p *ngIf="element !== 5 && element !== 2">{{element}}</p>
       </div>
     </ng-container>
+  </div>
+  <div>
+    <button type="button" name="button" (click)="selectBackground('red')">Red</button>
+    <button type="button" name="button" (click)="selectBackground('blue')">Blue</button>
+    <button type="button" name="button" (click)="selectBackground('')">Reset</button>
   </div>
 </div>

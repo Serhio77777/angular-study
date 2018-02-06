@@ -1,6 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
-import { NgModule } from '@angular/core';
+// import { CommonModule } from '@angular/common'; // main directives
+import { BrowserModule } from '@angular/platform-browser'; // run app in browser
+import { FormsModule } from '@angular/forms'; // ngModel, ngSubmit -> template driven forms
+import { ReactiveFormsModule } from '@angular/forms'; // reactive forms
+import { HttpClientModule } from '@angular/common/http'; // request to server
+import { NgModule } from '@angular/core'; // main modules
 
 // Routing
 import { RoutingConfig } from './app.routes';
@@ -15,7 +18,7 @@ import { CustomComponent } from './components/way-binding/custom/custom.componen
 
 
 @NgModule({
-  declarations: [
+  declarations: [ // templates
     AppComponent,
     LifecycleComponent,
     DirectivesComponent,
@@ -23,12 +26,15 @@ import { CustomComponent } from './components/way-binding/custom/custom.componen
     ChildComponent,
     CustomComponent
   ],
-  imports: [
+  imports: [ // modules
     BrowserModule,
     FormsModule,
     RoutingConfig
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [], // services
+  bootstrap: [AppComponent], // root components
+  exports: [], // directives/pipes/modules
+  entryComponents: [], // for first compiling
+  schemas: [] // not angular properties
 })
 export class AppModule { }
