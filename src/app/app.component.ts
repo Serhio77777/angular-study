@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Optional } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,8 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  public element: string = '';
+
   constructor (
-    private router: Router
+    @Optional() private router: Router
   ) {}
 
   public goToDirectives() {
