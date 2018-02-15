@@ -1,0 +1,22 @@
+<div class="way">
+  <h1>Click {{clicks}}</h1>
+
+  <button type="button" name="button" (click)="justClick()">Click</button>
+  <div class="">
+    <form class="">
+      <div class="">
+        <h2>UserName: {{data.username}}</h2>
+        <input name="username" type="text" [ngModel]="data.username" (ngModelChange)="data.username = $event">
+      </div>
+      <div class="">
+        <h2>Description: {{data.description}}</h2>
+        <input name="description" type="text" [(ngModel)]="data.description">
+      </div>
+    </form>
+  </div>
+
+  <div class="">
+    <ekreative-custom [(counter)]="someValue"></ekreative-custom>
+    <p>counterValue = {{someValue}}</p>
+  </div>
+</div>

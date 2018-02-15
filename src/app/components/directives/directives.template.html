@@ -1,0 +1,29 @@
+<div [ngClass]="{'red': color === 'red', 'blue': color === 'blue'}">
+  <h1>Directives Component</h1>
+  <div [ngSwitch]="data.selected">
+    <div class="">
+      <button type="button" name="button" (click)="select('one')">Select 1</button>
+      <button type="button" name="button" (click)="select('two')">Select 2</button>
+      <button type="button" name="button" (click)="select(3)">Select 3</button>
+    </div>
+    {{data | json}}
+	  <ng-template *ngSwitchCase="'one'">1{{data.count * 10}}</ng-template>
+	  <ng-template *ngSwitchCase="'two'">2{{data.count * 100}}</ng-template>
+	  <ng-template ngSwitchDefault>{{data.count * 1000}}</ng-template>
+	</div>
+  <div class="list">
+    <div class="" *ngFor="let element of list; let ind = index">
+      <p *ngIf="element !== 5 && element !== 2">Index: {{ind}} Value: {{element}}</p>
+    </div>
+    <ng-container *ngIf="listForIf.length > 0">
+      <div class="" *ngFor="let element of listForIf; let ind = index">
+        <p *ngIf="element !== 5 && element !== 2">{{element}}</p>
+      </div>
+    </ng-container>
+  </div>
+  <div>
+    <button type="button" name="button" (click)="selectBackground('red')">Red</button>
+    <button type="button" name="button" (click)="selectBackground('blue')">Blue</button>
+    <button type="button" name="button" (click)="selectBackground('')">Reset</button>
+  </div>
+</div>
