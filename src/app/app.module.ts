@@ -15,6 +15,12 @@ import { DirectivesComponent } from './components/directives/directives.componen
 import { WayBindingComponent } from './components/way-binding/way-binding.component';
 import { ChildComponent } from './components/lifecycle/child/child.component';
 import { CustomComponent } from './components/way-binding/custom/custom.component';
+import { TestRoutingComponent } from './components/test-routing/test-routing.component';
+import { ArtistComponent } from './components/artist/artist.component';
+import { AlbumComponent } from './components/album/album.component';
+import { MainService } from './services/main.service';
+import { Logger } from './services/logger.service';
+import { ArtistDetailedComponent } from './components/artist-detailed/artist-detailed.component';
 
 
 @NgModule({
@@ -24,14 +30,21 @@ import { CustomComponent } from './components/way-binding/custom/custom.componen
     DirectivesComponent,
     WayBindingComponent,
     ChildComponent,
-    CustomComponent
+    CustomComponent,
+    TestRoutingComponent,
+    ArtistComponent,
+    AlbumComponent,
+    ArtistDetailedComponent
   ],
   imports: [ // modules
     BrowserModule,
     FormsModule,
     RoutingConfig
   ],
-  providers: [], // services
+  providers: [
+    MainService,
+    Logger
+  ], // services
   bootstrap: [AppComponent], // root components
   exports: [], // directives/pipes/modules
   entryComponents: [], // for first compiling
