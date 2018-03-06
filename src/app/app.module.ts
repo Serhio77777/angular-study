@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser'; // run app in browser
 import { FormsModule } from '@angular/forms'; // ngModel, ngSubmit -> template driven forms
 import { ReactiveFormsModule } from '@angular/forms'; // reactive forms
 import { HttpClientModule } from '@angular/common/http'; // request to server
-import { NgModule } from '@angular/core'; // main modules
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'; // main modules
 
 // Routing
 import { RoutingConfig } from './app.routes';
@@ -18,9 +18,12 @@ import { CustomComponent } from './components/way-binding/custom/custom.componen
 import { TestRoutingComponent } from './components/test-routing/test-routing.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { AlbumComponent } from './components/album/album.component';
+import { ArtistDetailedComponent } from './components/artist-detailed/artist-detailed.component';
+
+// services
 import { MainService } from './services/main.service';
 import { Logger } from './services/logger.service';
-import { ArtistDetailedComponent } from './components/artist-detailed/artist-detailed.component';
+import { PowerService } from './services/power.service';
 
 
 @NgModule({
@@ -42,12 +45,14 @@ import { ArtistDetailedComponent } from './components/artist-detailed/artist-det
     RoutingConfig
   ],
   providers: [
+    // services
     MainService,
-    Logger
+    Logger,
+    PowerService
   ], // services
   bootstrap: [AppComponent], // root components
   exports: [], // directives/pipes/modules
   entryComponents: [], // for first compiling
-  schemas: [] // not angular properties
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ] // not angular properties
 })
 export class AppModule { }

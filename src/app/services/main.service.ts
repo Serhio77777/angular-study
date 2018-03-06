@@ -4,9 +4,10 @@ import { Logger } from './logger.service';
 
 @Injectable()
 export class MainService {
+  
   constructor(private _logger: Logger) {}
 
-  getCurrent(): User {
+  public getCurrent(): User {
     this._logger.log('Getting user...');
     return {
       username: 'Admin',

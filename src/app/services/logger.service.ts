@@ -2,9 +2,10 @@ import {Injectable} from '@angular/core';
 
 // @Injectable() // скобки обязательны
 export class Logger {
-  logs: string[] = [];
 
-  log(message: string) {
+  private logs: string[] = [];
+
+  public log(message: string): void {
     this.logs.push(message);
     console.log(message);
   }

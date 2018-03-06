@@ -5,9 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { WayBindingComponent } from './components/way-binding/way-binding.component';
-import {TestRoutingComponent} from "./components/test-routing/test-routing.component";
-import {AlbumComponent} from './components/album/album.component';
-import {ArtistComponent} from "./components/artist/artist.component";
+import { TestRoutingComponent } from "./components/test-routing/test-routing.component";
+import { AlbumComponent } from './components/album/album.component';
+import { ArtistComponent } from "./components/artist/artist.component";
 
 export const routes: Routes = [
   {

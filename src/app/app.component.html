@@ -1,9 +1,19 @@
-<div class="">
-  <button type="button" name="button" (click)="goToDirectives()">directives</button>
-  <button type="button" name="button" routerLink="lifecycle">lifecycle</button>
-  <button type="button" name="button" [routerLink]="['routing', '20/02/2018']">routing</button>
+<div class="Testing">
+  <h1 class="title">Welcome to Project!</h1>
+  <button id="directives" type="button" name="directives" (click)="goToDirectives()">directives</button>
+  <button id="lifecycle" type="button" name="lifecycle" routerLink="lifecycle">lifecycle</button>
+  <button id="routing" type="button" name="routing" [routerLink]="['routing', '20/02/2018']">routing</button>
   <a routerLink="way-binding">way-binding</a>
 </div>
+<div class="">
+  <button id="add" type="button" name="lifecycle" (click)="pushElement()">addElement</button>
+  <!-- <button id="add" type="button" name="lifecycle" (click)="addElement()">addElement</button> -->
+  <button id="delete" type="button" name="routing" (click)="deleteElement()">deleteElement</button>
+  <input class="text" type="text" name="" value="" [(ngModel)]="testTextObject.testingModel" (change)="changeTestingElement()">
+</div>
+<a class="true-power" (click)="pushTheBus()">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+  Come Here And You Become One Of The Greatest Lords In All Words!!!
+</a>
 <div style="text-align:center">
   <!--<h1>-->
   <!--Welcome to Project!-->
