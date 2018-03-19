@@ -65,13 +65,13 @@ describe('AppComponent', () => {
 
 
 // test search
-  // it('should render title in a h1 tag with Welcome to Project!', async(() => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.debugElement.nativeElement;
-  //   expect(compiled.querySelector('h1').textContent).toContain('Welcome to Project!');
-  //   expect(compiled.querySelector('.title').textContent).toContain('Welcome to Project!');;
-  // }));
+  it('should render title in a h1 tag with Welcome to Project!', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Project!');
+    expect(compiled.querySelector('.title').textContent).toContain('Welcome to Project!');;
+  }));
 
 // component
   it(`change data using methods`, async(() => {
@@ -113,45 +113,45 @@ describe('AppComponent', () => {
   }));
 
 // component and template
-  // it(`change data using template`, async(() => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.debugElement.nativeElement;
-  //   const component = fixture.componentInstance;
-  //   const elements = {
-  //     addArrayElement: compiled.querySelector('#add'),
-  //     removeArrayElement: compiled.querySelector('#delete'),
-  //     input: compiled.querySelector('.text'),
-  //     link: compiled.querySelector('.true-power')
-  //   }
-  //   // it('Check default value', () => {
-  //     expect(component.testTextObject.testingElement).toBeFalsy();
-  //     expect(component.testArray[2]).toBeGreaterThan(1);
-  //     expect(JSON.stringify(component.testObject)).toContain(JSON.stringify({
-  //       username: 'Test User 1',
-  //       email: 'lore@gods.sky'
-  //     }));
-  //   // })
-  //   // it('Check addArrayElement', () => {
-  //     elements.addArrayElement.click()
-  //     expect(component.testArray.length).toBeGreaterThan(3);
-  //   // })
-  //   // it('Check removeArrayElement', () => {
-  //     elements.removeArrayElement.click()
-  //     elements.removeArrayElement.click()
-  //     expect(component.testArray.length).toBeLessThan(4);
-  //   // })
-  //   // it('Check input', () => {
-  //     elements.input.value = 'Ash nazg durbatulûk, ash nazg gimbatul, Ash nazg thrakatulûk agh burzum-ishi krimpatul.'
-  //     elements.input.dispatchEvent(new Event('input'));
-  //     expect(component.testTextObject.testingModel).toEqual('Ash nazg durbatulûk, ash nazg gimbatul, Ash nazg thrakatulûk agh burzum-ishi krimpatul.');
-  //   // })
-  //   // it('Check link', () => {
-  //     elements.link.click()
-  //     expect(JSON.stringify(Object.keys(component.testObject))).toEqual(JSON.stringify(['username', 'email', 'location']));
-  //   // })
-  //   console.log('________Elements_______', elements)
-  // }));
+  it(`change data using template`, async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    const component = fixture.componentInstance;
+    const elements = {
+      addArrayElement: compiled.querySelector('#add'),
+      removeArrayElement: compiled.querySelector('#delete'),
+      input: compiled.querySelector('.text'),
+      link: compiled.querySelector('.true-power')
+    }
+    // it('Check default value', () => {
+      expect(component.testTextObject.testingElement).toBeFalsy();
+      expect(component.testArray[2]).toBeGreaterThan(1);
+      expect(JSON.stringify(component.testObject)).toContain(JSON.stringify({
+        username: 'Test User 1',
+        email: 'lore@gods.sky'
+      }));
+    // })
+    // it('Check addArrayElement', () => {
+      elements.addArrayElement.click()
+      expect(component.testArray.length).toBeGreaterThan(3);
+    // })
+    // it('Check removeArrayElement', () => {
+      elements.removeArrayElement.click()
+      elements.removeArrayElement.click()
+      expect(component.testArray.length).toBeLessThan(4);
+    // })
+    // it('Check input', () => {
+      elements.input.value = 'Ash nazg durbatulûk, ash nazg gimbatul, Ash nazg thrakatulûk agh burzum-ishi krimpatul.'
+      elements.input.dispatchEvent(new Event('input'));
+      expect(component.testTextObject.testingModel).toEqual('Ash nazg durbatulûk, ash nazg gimbatul, Ash nazg thrakatulûk agh burzum-ishi krimpatul.');
+    // })
+    // it('Check link', () => {
+      elements.link.click()
+      expect(JSON.stringify(Object.keys(component.testObject))).toEqual(JSON.stringify(['username', 'email', 'location']));
+    // })
+    console.log('________Elements_______', elements)
+  }));
 
 
 

@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WayBindingComponent } from './way-binding.component';
+import { FormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 describe('WayBindingComponent', () => {
   let component: WayBindingComponent;
@@ -8,7 +11,9 @@ describe('WayBindingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WayBindingComponent ]
+      declarations: [ WayBindingComponent ],
+      imports: [FormsModule],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
